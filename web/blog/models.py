@@ -31,6 +31,7 @@ class post(models.Model):
         return self.titulo
     
     
-    
+
+        
     
 

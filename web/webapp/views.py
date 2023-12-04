@@ -16,9 +16,5 @@ def contacto(request):
     
     return render(request, "webapp/contacto.html")
 
-def blog(request):
-    
-    return render(request, "webapp/blog.html")
-
 
 
