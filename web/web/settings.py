@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'webapp',
     'servicios',
     'blog',
+    'contacto',
     
 ]
 
