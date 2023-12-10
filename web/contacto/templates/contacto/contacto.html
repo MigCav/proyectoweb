@@ -6,6 +6,13 @@
 
     <div class="form_contacto"> 
         
+        {% if "valido" in request.GET %} <!--si al cargar tiene esa palabra en la url (por la redireccion) realiza la accion siguiente-->
+
+        <p style="color: white;">Informacion enviada correctamente</p>
+
+        {% endif %}
+
+
         <form action="" method="post" style="text-align: center;">
 
             {% csrf_token %}
