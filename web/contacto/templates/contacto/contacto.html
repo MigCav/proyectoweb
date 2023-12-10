@@ -2,4 +2,25 @@
 
 {% block title %} Contáctanos {% endblock %}
 
-{% block content %}    <p>Probando esta vaina</p>     {% endblock %}
+{% block content %} 
+
+    <div class="form_contacto"> 
+        
+        <form action="" method="post" style="text-align: center;">
+
+            {% csrf_token %}
+
+            <table style="color:white; margin: 20px auto; text-align: 10px auto;">
+            
+
+                {{form_contacto.as_table}}
+        
+            </table>
+
+            <input type="submit" value="Enviar" style="width: 150px;">
+
+        </form>
+
+    </div>  
+
+{% endblock %}

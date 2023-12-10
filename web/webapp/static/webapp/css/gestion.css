@@ -277,3 +277,18 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
+.form_contacto{
+
+  background-color: rgba(24, 64, 8);
+  
+  margin: 10px auto;
+
+  width: 50%;
+
+  border-radius: 10px;
+
+  padding: 1px 0px;
+
+
+}
