@@ -4,10 +4,10 @@ from .models import categoria, producto
 
 
 class categoria_admin(admin.ModelAdmin):
-    readonly_fields = ('created',)
+    readonly_fields = ('created','updated')
     
 class producto_admin(admin.ModelAdmin):
-    readonly_fields =("created",)
+    readonly_fields =("created",'updated')
     
 admin.site.register(producto, producto_admin)
 admin.site.register(categoria, categoria_admin)
