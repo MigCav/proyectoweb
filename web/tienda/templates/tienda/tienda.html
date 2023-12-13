@@ -2,9 +2,11 @@
 
 {% block title %} Tienda online {% endblock %}
 
-{% block content %}  
+{% block content %} 
+
 
 {% for producto in productos %}
+
 
 <section class="page-section clearfix">
     <div class="container">
@@ -13,7 +15,19 @@
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
           <h2 class="section-heading mb-4" >
             <span class="section-heading-lower">Codigo: {{producto.codigo}}</span>
-            <span class="section-heading-upper">Precio: {{producto.precio}}$</span>
+            <span class="section-heading-upper">Disponibilidad: 
+              
+              {% if producto.disponibilidad == True %}
+
+                Disponible
+              
+              {% else %}
+
+                No Disponible
+
+              {% endif %}
+            </span><span class="section-heading-upper">Precio: {{producto.precio}}$</span>
+           
           </h2>
           
             <div style="text-align: left; color: white; font-size: 70%;">
@@ -50,5 +64,8 @@
     </div>
 
 </section>
+
+
+
 
 {% endblock %}

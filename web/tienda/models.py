@@ -1,4 +1,6 @@
+from email.policy import default
 from django.db import models
+from django.forms import BooleanField
 
 # Create your models here.
 
@@ -21,8 +23,9 @@ class producto(models.Model):
     precio      = models.IntegerField()
     categorias  = models.ManyToManyField(categoria)
     imagen      = models.ImageField(upload_to="tienda")
+    disponibilidad = models.BooleanField(default=True)
     created     = models.DateTimeField(auto_now_add=True)
-    updated     = models.DateTimeField(auto_now_add=True)
+    updated     = models.DateTimeField(auto_now=True)
     
     class meta:
         verbose_name = "producto"
