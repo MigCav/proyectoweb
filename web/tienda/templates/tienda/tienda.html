@@ -4,10 +4,10 @@
 
 {% block content %} 
 
-
+<div class="row">
 {% for producto in productos %}
 
-
+<!--
 <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
@@ -47,7 +47,27 @@
       </div>
     </div>
   </section>
+-->
+
+
+<div class="card" style="width: 10%; margin: auto;">
+
+  <img src="{{producto.imagen.url}}">
+  <div class="card-body" style="text-align: center;">
+      <h5 class="card-title">{{producto.codigo}}</h5>
+      <h6 class="card-title">{{producto.precio}}$</h6>
+      <h6 class="card-title">{{producto.categorias}}</h6>
+
+  </div>
+  
+
+
+</div>
+
+
 {% endfor %}
+</div>
+
 
 <section>
 
