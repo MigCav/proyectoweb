@@ -18,14 +18,7 @@
           
             <div style="text-align: left; color: white; font-size: 70%;">
 
-                Categorias: &nbsp;
-
-                {% for categoria in categorias %}
-
-                 {{categoria.nombre}}</a> &nbsp; 
-
-                {% endfor %}
-
+            
             </div>
 
 
@@ -38,15 +31,15 @@
 <section>
 
     <div style="width: 70%; margin: auto; text-align: center; color: white;">
-    
-        Categorias: &nbsp;&nbsp;
+
+        Categorias: &nbsp;&nbsp;<a href="{% url 'Tienda' %} "> Inicio </a>
 
         {% for categoria in categorias %}
 
         &nbsp;&nbsp;<a href="{% url 'categoriat' categoria.id %} "> {{categoria.nombre}}</a> &nbsp;&nbsp;  
 
         {% endfor %}
-
+      
     </div>
 
 </section>
